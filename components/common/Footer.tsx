@@ -4,7 +4,7 @@ import { faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6 ">
+    <footer className="bg-[#363636] text-white py-6 ">
       <div className="container mx-auto px-4  ">
         <div className="flex justify-between items-center">
           <div>
