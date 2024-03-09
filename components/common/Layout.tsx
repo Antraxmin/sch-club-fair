@@ -21,7 +21,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="bg-[#F2EFE8] min-h-screen">
       <div className="h-full max-w-md mx-auto ">
-        <div className="h-screen flex flex-col">
+        <div className="h-screen">
           <div className="flex items-center justify-between p-4">
             <div>
               <FontAwesomeIcon
@@ -41,7 +41,6 @@ export default function Layout({ children }: LayoutProps) {
             />
           )}
           <div>{children}</div>
-          <Footer />
         </div>
       </div>
     </div>
