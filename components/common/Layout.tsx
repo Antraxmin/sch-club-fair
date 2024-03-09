@@ -21,7 +21,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="bg-[#F2EFE8] min-h-screen">
       <div className="h-full max-w-md mx-auto ">
-        <div className="h-screen">
+        <div className="h-full">
           <div className="flex items-center justify-between p-4">
             <div>
               <FontAwesomeIcon
@@ -31,7 +31,7 @@ export default function Layout({ children }: LayoutProps) {
                 className="cursor-pointer"
               />
             </div>
-            <div>2024 동아리 박람회</div>
+            <div className="text-sm">2024 동아리 박람회</div>
           </div>
           <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} />
           {isDrawerOpen && (
@@ -40,7 +40,7 @@ export default function Layout({ children }: LayoutProps) {
               onClick={closeDrawer}
             />
           )}
-          <div>{children}</div>
+          <div className="p-6">{children}</div>
         </div>
       </div>
     </div>

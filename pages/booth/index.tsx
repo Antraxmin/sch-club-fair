@@ -1,9 +1,10 @@
+import ClubList from "@/components/booth/ClubList";
 import Image from "next/image";
 
 export default function BoothPage() {
   return (
     <>
-      <div className="mt-4 flex flex-col items-center">
+      <div className=" flex flex-col items-center">
         <div className="bg-[#2B9F70] text-white text-sm py-1.5 px-6 rounded-full shadow-lg mb-4">
           <span>동아리 부스 안내</span>
         </div>
@@ -16,6 +17,7 @@ export default function BoothPage() {
             alt={""}
           />
         </div>
+        <ClubList />
       </div>
     </>
   );
