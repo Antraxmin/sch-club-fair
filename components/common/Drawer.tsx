@@ -30,10 +30,16 @@ export default function Drawer({ isOpen, onClose }: DrawerProps) {
           </div>
           <ul className="text-md font-bold mt-6">
             <Link href={"/booth"}>
-              <li className="mb-6">부스 목록</li>
+              <li className="mb-6">부스 안내</li>
             </Link>
             <Link href={"/concert"}>
               <li className="mb-6">공연 일정</li>
+            </Link>
+            <Link href={"/event"}>
+              <li className="mb-6">이벤트</li>
+            </Link>
+            <Link href={"/guest"}>
+              <li className="mb-6">방명록</li>
             </Link>
             <Link href={"/notice"}>
               <li className="mb-6">공지 사항</li>
@@ -42,6 +48,19 @@ export default function Drawer({ isOpen, onClose }: DrawerProps) {
               <li className="mb-6">만든 사람</li>
             </Link>
           </ul>
+          {/* <div className="mt-8">
+            <Link href={"/login"}>
+              <button className="text-blue-600 hover:underline mx-2">
+                로그인
+              </button>
+            </Link>
+
+            <Link href={"/signup"}>
+              <button className="text-blue-600 hover:underline mx-2">
+                회원가입
+              </button>
+            </Link>
+          </div> */}
         </div>
       </div>
     </div>
