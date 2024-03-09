@@ -1,10 +1,20 @@
+// pages/index.js
+import React, { useState } from "react";
 import Footer from "@/components/common/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Drawer from "@/components/common/Drawer";
 
 export default function Home() {
-  return (
-    <div className="h-screen flex flex-col">
-      <div className="flex-grow">2024 동아리 박람회</div>
-      <Footer />
-    </div>
-  );
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+  };
+
+  return <>hi</>;
 }
