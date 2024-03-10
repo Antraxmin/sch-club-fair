@@ -1,5 +1,3 @@
 {
-  "rules": {
-    "no-restricted-properties": "off"
-  }
+  "extends": "next/core-web-vitals"
 }
