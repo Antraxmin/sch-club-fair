@@ -1,23 +1,32 @@
 // pages/index.js
 import React, { useState } from "react";
-import Footer from "@/components/common/Footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import Drawer from "@/components/common/Drawer";
 import Image from "next/image";
+import Drawer from "@/components/common/Drawer";
 
 export default function Home() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+  };
+
   return (
-    <>
-      <div className="w-full h-full ">
+    <div className="relative w-screen h-screen bg-[#363636]">
+      <div onClick={toggleDrawer} className="cursor-pointer">
         <Image
-          src={"/img/main.png"}
+          src="/img/main.svg"
           layout="responsive"
-          width={100}
-          height={100}
-          alt={""}
+          width={1920}
+          height={1080}
+          objectFit="cover"
+          alt=""
         />
       </div>
-    </>
+      <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} />
+    </div>
   );
 }

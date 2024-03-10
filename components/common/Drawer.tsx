@@ -26,9 +26,11 @@ export default function Drawer({ isOpen, onClose }: DrawerProps) {
           />
         </div>
         <div className="flex flex-col justify-center items-center mt-10">
-          <div className="flex items-center justify-between bg-[#2B9F70] text-white text-sm py-1 px-4 rounded-full shadow-lg mb-4">
-            <span>모여봐요 동아리의 숲</span>
-          </div>
+          <Link href={"/"}>
+            <div className="flex items-center justify-between bg-[#2B9F70] text-white text-sm py-1 px-4 rounded-full shadow-lg mb-4">
+              <span>모여봐요 동아리의 숲</span>
+            </div>
+          </Link>
           <ul className="text-md font-bold mt-6">
             <Link href={"/booth"}>
               <li className="mb-8 flex">

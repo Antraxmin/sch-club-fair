@@ -8,6 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
   if (router.pathname.startsWith("/admin")) {
     return <Component {...pageProps} />;
   }
+  if (router.pathname == "/") {
+    return <Component {...pageProps} />;
+  }
   return (
     <Layout>
       <Component {...pageProps} />
