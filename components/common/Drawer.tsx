@@ -54,18 +54,7 @@ export default function Drawer({ isOpen, onClose }: DrawerProps) {
                 공연 일정
               </li>
             </Link>
-            <Link href={"/event"}>
-              <li className="mb-8 flex">
-                <Image
-                  src="/img/logo.png"
-                  width="25"
-                  height="20"
-                  alt=""
-                  className="mr-2"
-                />
-                이벤트
-              </li>
-            </Link>
+
             <Link href={"/guest"}>
               <li className="mb-8 flex">
                 <Image
