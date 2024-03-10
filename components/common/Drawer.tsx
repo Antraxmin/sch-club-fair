@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import Image from "next/image";
 
 interface DrawerProps {
   isOpen: boolean;
@@ -30,23 +31,77 @@ export default function Drawer({ isOpen, onClose }: DrawerProps) {
           </div>
           <ul className="text-md font-bold mt-6">
             <Link href={"/booth"}>
-              <li className="mb-6">부스 안내</li>
+              <li className="mb-8 flex">
+                <Image
+                  src="/img/logo.png"
+                  width="25"
+                  height="20"
+                  alt=""
+                  className="mr-2"
+                />
+                부스 안내
+              </li>
             </Link>
             <Link href={"/concert"}>
-              <li className="mb-6">공연 일정</li>
+              <li className="mb-8 flex">
+                <Image
+                  src="/img/logo.png"
+                  width="25"
+                  height="20"
+                  alt=""
+                  className="mr-2"
+                />
+                공연 일정
+              </li>
             </Link>
             <Link href={"/event"}>
-              <li className="mb-6">이벤트</li>
+              <li className="mb-8 flex">
+                <Image
+                  src="/img/logo.png"
+                  width="25"
+                  height="20"
+                  alt=""
+                  className="mr-2"
+                />
+                이벤트
+              </li>
             </Link>
             <Link href={"/guest"}>
-              <li className="mb-6">방명록</li>
+              <li className="mb-8 flex">
+                <Image
+                  src="/img/logo.png"
+                  width="25"
+                  height="20"
+                  alt=""
+                  className="mr-2"
+                />
+                방명록
+              </li>
             </Link>
             <Link href={"/notice"}>
-              <li className="mb-6">공지 사항</li>
+              <li className="mb-6 flex">
+                <Image
+                  src="/img/logo.png"
+                  width="25"
+                  height="20"
+                  alt=""
+                  className="mr-2"
+                />
+                공지사항
+              </li>
             </Link>
-            <Link href={"/about"}>
-              <li className="mb-6">만든 사람</li>
-            </Link>
+            {/* <Link href={"/about"}>
+              <li className="mb-6 flex">
+                <Image
+                  src="/img/logo.png"
+                  width="25"
+                  height="20"
+                  alt=""
+                  className="mx-2"
+                />
+                만든 사람
+              </li>
+            </Link> */}
           </ul>
           {/* <div className="mt-8">
             <Link href={"/login"}>

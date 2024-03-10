@@ -4,17 +4,20 @@ import Footer from "@/components/common/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Drawer from "@/components/common/Drawer";
+import Image from "next/image";
 
 export default function Home() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
-  };
-
-  const closeDrawer = () => {
-    setIsDrawerOpen(false);
-  };
-
-  return <>hi</>;
+  return (
+    <>
+      <div className="w-full h-full ">
+        <Image
+          src={"/img/main.png"}
+          layout="responsive"
+          width={100}
+          height={100}
+          alt={""}
+        />
+      </div>
+    </>
+  );
 }
