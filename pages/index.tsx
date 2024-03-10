@@ -1,10 +1,10 @@
-// pages/index.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Drawer from "@/components/common/Drawer";
 
 export default function Home() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isPcScreen, setIsPcScreen] = useState(false);
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -14,8 +14,22 @@ export default function Home() {
     setIsDrawerOpen(false);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPcScreen(window.innerWidth > 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="relative w-screen h-screen bg-[#363636]">
+    <div
+      className={`relative w-screen h-screen bg-[#363636] ${
+        isPcScreen ? "max-w-md mx-auto " : ""
+      }`}
+    >
       <div onClick={toggleDrawer} className="cursor-pointer">
         <Image
           src="/img/main.svg"
