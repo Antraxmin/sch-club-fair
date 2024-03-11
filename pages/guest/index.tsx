@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function GuestPage() {
   const [comments, setComments] = useState<
@@ -13,21 +14,44 @@ export default function GuestPage() {
   const [studentId, setStudentId] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
 
-  const addComment = () => {
-    const timestamp = new Date().toLocaleString();
-    setComments([
-      ...comments,
-      {
+  const addComment = async () => {
+    try {
+      const timestamp = new Date().toLocaleString();
+      const response = await axios.post("/api/comments", {
         studentId: studentId,
         phoneNumber: phoneNumber,
         comment: newComment,
         timestamp: timestamp,
-      },
-    ]);
-    setNewComment("");
-    setStudentId("");
-    setPhoneNumber("");
+      });
+      console.log(response.data);
+      setComments([
+        ...comments,
+        {
+          studentId: studentId,
+          phoneNumber: phoneNumber,
+          comment: newComment,
+          timestamp: timestamp,
+        },
+      ]);
+      setNewComment("");
+      setStudentId("");
+      setPhoneNumber("");
+    } catch (error) {
+      console.error("댓글을 등록하는 데 문제가 발생했습니다:", error);
+    }
   };
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const response = await axios.get("/api/comments");
+        setComments(response.data);
+      } catch (error) {
+        console.error("댓글을 불러오는 데 문제가 발생했습니다:", error);
+      }
+    };
+    fetchComments();
+  }, []);
 
   return (
     <>
