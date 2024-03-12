@@ -14,7 +14,7 @@ export default function ClubList() {
               />
               <div>
                 <h2 className="text-md font-bold">{club.title}</h2>
-                <p className="text-xs">{club.content}</p>
+                {/* <p className="text-xs">{club.content}</p> */}
               </div>
             </div>
           </li>

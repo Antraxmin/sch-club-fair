@@ -33,13 +33,13 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             <div className="text-sm">2024 동아리 박람회</div>
           </div>
-          {/* <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} />
+          <Drawer isOpen={isDrawerOpen} onClose={closeDrawer} />
           {isDrawerOpen && (
             <div
               className="fixed top-0 left-0 h-screen w-full bg-black opacity-50 z-40"
               onClick={closeDrawer}
             />
-          )} */}
+          )}
           <div className="p-6">{children}</div>
         </div>
       </div>

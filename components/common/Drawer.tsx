@@ -69,7 +69,7 @@ export default function Drawer({ isOpen, onClose }: DrawerProps) {
                 방명록
               </li>
             </Link>
-            <Link href={"/notice"}>
+            {/* <Link href={"/notice"}>
               <li className="mb-6 flex">
                 <Image
                   src="/img/logo.png"
@@ -80,7 +80,7 @@ export default function Drawer({ isOpen, onClose }: DrawerProps) {
                 />
                 공지사항
               </li>
-            </Link>
+            </Link> */}
             {/* <Link href={"/about"}>
               <li className="mb-6 flex">
                 <Image
