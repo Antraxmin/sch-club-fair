@@ -141,36 +141,36 @@ const clubs = [
     content: "비터스윗 내용",
     img: "/img/비터스윗.png",
   },
-  {
-    title: "쥴리아니",
-    content: "쥴리아니 내용",
-    img: "/img/쥴리아니.png",
-  },
-  {
-    title: "오손도손",
-    content: "오손도손 내용",
-    img: "/img/오손도손.png",
-  },
-  {
-    title: "대학Y",
-    content: "대학Y 내용",
-    img: "/img/대학Y.png",
-  },
-  {
-    title: "콘텐서트",
-    content: "콘텐서트 내용",
-    img: "/img/콘텐서트.png",
-  },
-  {
-    title: "UMB랄라",
-    content: "UMB랄라 내용",
-    img: "/img/UMB랄라.png",
-  },
-  {
-    title: "SAM",
-    content: "SAM 내용",
-    img: "/img/SAM.png",
-  },
+  //   {
+  //     title: "쥴리아니",
+  //     content: "쥴리아니 내용",
+  //     img: "/img/쥴리아니.png",
+  //   },
+  //   {
+  //     title: "오손도손",
+  //     content: "오손도손 내용",
+  //     img: "/img/오손도손.png",
+  //   },
+  //   {
+  //     title: "대학Y",
+  //     content: "대학Y 내용",
+  //     img: "/img/대학Y.png",
+  //   },
+  //   {
+  //     title: "콘텐서트",
+  //     content: "콘텐서트 내용",
+  //     img: "/img/콘텐서트.png",
+  //   },
+  //   {
+  //     title: "UMB랄라",
+  //     content: "UMB랄라 내용",
+  //     img: "/img/UMB랄라.png",
+  //   },
+  //   {
+  //     title: "SAM",
+  //     content: "SAM 내용",
+  //     img: "/img/SAM.png",
+  //   },
 ];
 
 export default clubs;
